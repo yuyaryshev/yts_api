@@ -1,2 +1,2 @@
-export const version = '0.0.3';
+export const version = '1.0.0';
 export const packageName = 'ytypescript_api';

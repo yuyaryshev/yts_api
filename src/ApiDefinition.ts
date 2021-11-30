@@ -45,7 +45,7 @@ export function apiDefinition<TLiteral extends string, TApiRequestDecoderObj, TA
 
 // Example:
 export const exampleApi = apiDefinition(
-    "example",
+    "/example",
     "get",
     {
         //t:"example",
@@ -56,7 +56,7 @@ export const exampleApi = apiDefinition(
     },
 );
 
-const x1: typeof exampleApi.url = "example";
+const x1: typeof exampleApi.url = "/example";
 const x2: typeof exampleApi.request = { x: 1 };
 const x3: typeof exampleApi.response = { y: 2 };
 

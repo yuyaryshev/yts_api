@@ -10,7 +10,8 @@ export function implementApi<TLiteral extends string, TApiRequest, TApiResponse>
 ) {
     const callback = async (req: Request, res: Response): Promise<Response> => {
         try {
-            const requestData = apiDefinition.requestDecoder.runWithException(req.body);
+            const requestData = apiDefinition.httpMethod === "get" ? req.query : req.body;
+            apiDefinition.requestDecoder.runWithException(requestData);
             const r = await requestHandler(requestData, req, res);
 
             if (validationSettings.validateResponsesOnServer) {

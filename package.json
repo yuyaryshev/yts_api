@@ -1,6 +1,6 @@
 {
     "name": "ytypescript_api",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "keywords": [
         "ytypescript_api"
     ],
@@ -118,9 +118,12 @@
         "url": "https://github.com/yuyaryshev/ytypescript_api/issues"
     },
     "private": false,
+    "peerDependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1"
+    },
     "dependencies": {
         "@mojotech/json-type-validation": "^3.1.0",
-        "axios": "^0.24.0",
-        "express": "^4.17.1"
+        "axios": "^0.24.0"
     }
 }
