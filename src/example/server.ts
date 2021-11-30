@@ -1,7 +1,7 @@
 import { implementApi } from "../index.js"; // import {implementApi} from "ytypescript_api";
 import express from "express";
 import bodyParser from "body-parser";
-import { exampleApi } from "./api/index.js";
+import {example2Api, exampleApi} from "./api/index.js";
 
 const app = express();
 const port = 3000;
@@ -21,6 +21,17 @@ implementApi(
         return responseData;
     },
 );
+
+implementApi(
+    app,
+    example2Api,
+    (requestData: typeof example2Api.request /* uncomment if needed: , req: Request, res: Response*/): typeof example2Api.response => {
+        const responseData = { y: requestData.x * 2 };
+        console.log({ m: exampleApi.httpMethod, url: exampleApi.url, requestData, responseData });
+        return responseData;
+    },
+);
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
