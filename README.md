@@ -1,5 +1,5 @@
-# yts_api
-yts_api library gives a 'standard' way to define, implement and call an api in Typescript. See Examples.
+# ytypescript_api
+ytypescript_api library gives a 'standard' way to define, implement and call API in Typescript. See Examples.
 
 # Usage
 
